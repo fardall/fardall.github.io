@@ -1,6 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { Space_Grotesk, Inter } from "next/font/google";
 import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -15,38 +17,7 @@ const inter = Inter({
 export default function Home() {
   return (
     <div className={`${spaceGrotesk.variable} ${inter.variable} font-body bg-surface text-on-surface min-h-screen`}>
-      {/* TopNavBar */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-white dark:bg-black border-b-2 border-black dark:border-white">
-        <div className="text-2xl font-black text-black dark:text-white tracking-tight font-headline">
-          ENGINEER_PORTFOLIO
-        </div>
-        <div className="hidden md:flex gap-8 items-center">
-          <Link
-            className="font-headline uppercase tracking-tighter font-bold text-black dark:text-white underline decoration-4 underline-offset-8 transition-colors duration-100 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
-            href="#"
-          >
-            PROJECTS
-          </Link>
-          <Link
-            className="font-headline uppercase tracking-tighter font-bold text-gray-500 dark:text-gray-400 transition-colors duration-100 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
-            href="#blog"
-          >
-            BLOG
-          </Link>
-          <Link
-            className="font-headline uppercase tracking-tighter font-bold text-gray-500 dark:text-gray-400 transition-colors duration-100 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
-            href="#"
-          >
-            ABOUT
-          </Link>
-          <Link
-            className="font-headline uppercase tracking-tighter font-bold text-gray-500 dark:text-gray-400 transition-colors duration-100 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
-            href="#"
-          >
-            CONTACT
-          </Link>
-        </div>
-      </nav>
+      <Header activePage="projects" />
 
       <main className="pt-20">
         {/* Hero Section */}
@@ -224,32 +195,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-white dark:bg-black border-t-2 border-black dark:border-white">
-        <div className="font-headline text-xs font-bold uppercase tracking-widest text-black dark:text-white">
-          ©2024 TECHNICAL_MONOLITH
-        </div>
-        <div className="flex gap-8">
-          <Link
-            className="font-headline text-xs font-bold uppercase tracking-widest text-gray-600 dark:text-gray-400 hover:italic active:opacity-70"
-            href="#"
-          >
-            GITHUB
-          </Link>
-          <Link
-            className="font-headline text-xs font-bold uppercase tracking-widest text-gray-600 dark:text-gray-400 hover:italic active:opacity-70"
-            href="#"
-          >
-            LINKEDIN
-          </Link>
-          <Link
-            className="font-headline text-xs font-bold uppercase tracking-widest text-gray-600 dark:text-gray-400 hover:italic active:opacity-70"
-            href="#"
-          >
-            EMAIL
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
