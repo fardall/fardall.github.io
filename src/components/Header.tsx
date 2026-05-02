@@ -16,8 +16,8 @@ export default function Header({ activePage }: HeaderProps) {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-white dark:bg-black border-b-2 border-black dark:border-white">
-      <div className="text-2xl font-black text-black dark:text-white tracking-tight font-headline">
-        ENGINEER_PORTFOLIO
+      <div className="text-2xl font-black text-black dark:text-white tracking-tight font-headline uppercase">
+        Muhamad Fardal Akter Min Gali
       </div>
       <div className="hidden md:flex gap-8 items-center">
         <Link className={getLinkClass("projects")} href="/">

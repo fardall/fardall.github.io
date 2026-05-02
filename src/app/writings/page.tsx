@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { posts } from "@/lib/posts";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -15,25 +16,6 @@ const inter = Inter({
 });
 
 export default function WritingsPage() {
-  const posts = [
-    {
-      date: "MAR 12, 2024",
-      title: "Optimizing Kotlin Multiplatform Performance",
-    },
-    {
-      date: "FEB 08, 2024",
-      title: "Architecting Zenith: A Flutter Case Study",
-    },
-    {
-      date: "JAN 22, 2024",
-      title: "Refactoring Legacy Android Systems for Jetpack Compose",
-    },
-    {
-      date: "DEC 15, 2023",
-      title: "CI/CD Automation for Mobile Monorepos",
-    },
-  ];
-
   return (
     <div className={`${spaceGrotesk.variable} ${inter.variable} font-body bg-surface text-on-surface min-h-screen`}>
       <Header activePage="writings" />
@@ -54,7 +36,7 @@ export default function WritingsPage() {
                 <Link
                   key={index}
                   className="group flex flex-col md:flex-row items-start md:items-center justify-between py-12 px-4 border-b border-black transition-all duration-300 hover:bg-black hover:text-white"
-                  href="#"
+                  href={`/writings/${post.slug}`}
                 >
                   <div className="w-full md:w-1/4 mb-4 md:mb-0">
                     <span className="font-mono text-sm tracking-widest text-neutral-500 group-hover:text-neutral-400 uppercase">

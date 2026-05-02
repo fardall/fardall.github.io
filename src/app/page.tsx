@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { posts } from "@/lib/posts";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -170,15 +171,11 @@ export default function Home() {
             TECHNICAL_WRITING
           </h2>
           <div className="space-y-4">
-            {[
-              { date: "MAR 12, 2024", title: "Deep Dive into Kotlin Multiplatform Performance" },
-              { date: "FEB 08, 2024", title: "The Architecture of Zenith: A Flutter Case Study" },
-              { date: "JAN 22, 2024", title: "Refactoring Legacy Android Systems for Jetpack Compose" },
-            ].map((post, index) => (
+            {posts.slice(0, 3).map((post, index) => (
               <Link
                 key={index}
                 className="block bg-white border-2 border-black p-6 group transition-all hover:bg-black hover:text-white"
-                href="#"
+                href={`/writings/${post.slug}`}
               >
                 <div className="flex justify-between items-center">
                   <div>
