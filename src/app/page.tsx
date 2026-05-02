@@ -3,7 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { posts } from "@/lib/posts";
+import { getSortedPostsData } from "@/lib/markdown";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -15,7 +15,9 @@ const inter = Inter({
   variable: "--font-body",
 });
 
-export default function Home() {
+export default async function Home() {
+  const allPosts = await getSortedPostsData();
+
   return (
     <div className={`${spaceGrotesk.variable} ${inter.variable} font-body bg-surface text-on-surface min-h-screen`}>
       <Header activePage="projects" />
@@ -171,7 +173,7 @@ export default function Home() {
             TECHNICAL_WRITING
           </h2>
           <div className="space-y-4">
-            {posts.slice(0, 3).map((post, index) => (
+            {allPosts.slice(0, 3).map((post, index) => (
               <Link
                 key={index}
                 className="block bg-white border-2 border-black p-6 group transition-all hover:bg-black hover:text-white"

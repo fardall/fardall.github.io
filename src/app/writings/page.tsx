@@ -3,7 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { posts } from "@/lib/posts";
+import { getSortedPostsData } from "@/lib/markdown";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -15,7 +15,9 @@ const inter = Inter({
   variable: "--font-body",
 });
 
-export default function WritingsPage() {
+export default async function WritingsPage() {
+  const allPosts = await getSortedPostsData();
+
   return (
     <div className={`${spaceGrotesk.variable} ${inter.variable} font-body bg-surface text-on-surface min-h-screen`}>
       <Header activePage="writings" />
@@ -32,7 +34,7 @@ export default function WritingsPage() {
           {/* Blog List Section */}
           <section className="mb-24">
             <div className="flex flex-col">
-              {posts.map((post, index) => (
+              {allPosts.map((post, index) => (
                 <Link
                   key={index}
                   className="group flex flex-col md:flex-row items-start md:items-center justify-between py-12 px-4 border-b border-black transition-all duration-300 hover:bg-black hover:text-white"

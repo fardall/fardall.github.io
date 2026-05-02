@@ -1,7 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Space_Grotesk, Inter } from "next/font/google";
 import Link from "next/link";
-import { posts } from "@/lib/posts";
+import { getPostData, getSortedPostsData } from "@/lib/markdown";
 import { notFound } from "next/navigation";
 
 const spaceGrotesk = Space_Grotesk({
@@ -20,7 +20,7 @@ export default async function WritingDetail({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const post = await getPostData(slug);
 
   if (!post) {
     notFound();
@@ -61,38 +61,10 @@ export default async function WritingDetail({
             </header>
 
             {/* Article Body */}
-            <article className="text-on-surface max-w-none space-y-8">
-              {post.content.map((block, index) => {
-                switch (block.type) {
-                  case "paragraph":
-                    return (
-                      <p key={index} className="text-xl leading-relaxed">
-                        {block.text}
-                      </p>
-                    );
-                  case "blockquote":
-                    return (
-                      <blockquote
-                        key={index}
-                        className="italic text-on-surface-variant py-8 border-y-2 border-black/10 text-2xl font-headline font-medium"
-                      >
-                        &quot;{block.text}&quot;
-                      </blockquote>
-                    );
-                  case "heading":
-                    return (
-                      <h2
-                        key={index}
-                        className="font-headline text-3xl font-bold mt-16 mb-8 uppercase tracking-tight"
-                      >
-                        {block.text}
-                      </h2>
-                    );
-                  default:
-                    return null;
-                }
-              })}
-            </article>
+            <article 
+              className="markdown-content text-on-surface max-w-none"
+              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            />
           </div>
         </div>
       </main>
@@ -101,7 +73,8 @@ export default async function WritingDetail({
 }
 
 export async function generateStaticParams() {
-  return posts.map((post) => ({
+  const allPosts = await getSortedPostsData();
+  return allPosts.map((post) => ({
     slug: post.slug,
   }));
 }
