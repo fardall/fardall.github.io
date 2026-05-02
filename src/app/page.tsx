@@ -33,9 +33,11 @@ export default async function Home() {
               <button className="bg-primary text-on-primary px-10 py-5 text-xl font-headline font-bold uppercase tracking-widest hover:bg-white hover:text-black border-2 border-black transition-all active:translate-y-0.5 cursor-pointer">
                 VIEW WORK
               </button>
-              <button className="bg-transparent text-primary px-10 py-5 text-xl font-headline font-bold uppercase tracking-widest border-2 border-black hover:bg-black hover:text-white transition-all active:translate-y-0.5 cursor-pointer">
-                GET IN TOUCH
-              </button>
+              <Link href="/contact">
+                <button className="w-full md:w-auto bg-transparent text-primary px-10 py-5 text-xl font-headline font-bold uppercase tracking-widest border-2 border-black hover:bg-black hover:text-white transition-all active:translate-y-0.5 cursor-pointer">
+                  GET IN TOUCH
+                </button>
+              </Link>
             </div>
           </div>
         </section>

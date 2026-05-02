@@ -26,10 +26,10 @@ export default function Header({ activePage }: HeaderProps) {
         <Link className={getLinkClass("writings")} href="/writings">
           WRITINGS
         </Link>
-        <Link className={getLinkClass("about")} href="#">
+        <Link className={getLinkClass("about")} href="/about">
           ABOUT
         </Link>
-        <Link className={getLinkClass("contact")} href="#">
+        <Link className={getLinkClass("contact")} href="/contact">
           CONTACT
         </Link>
       </div>
