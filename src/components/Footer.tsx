@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-white dark:bg-black border-t-2 border-black dark:border-white">
       <div className="font-headline text-xs font-bold uppercase tracking-widest text-black dark:text-white">
-        ©2024 TECHNICAL_MONOLITH
+        ©2024 MUHAMAD FARDAL
       </div>
       <div className="flex gap-8">
         <Link
