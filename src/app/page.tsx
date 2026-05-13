@@ -75,11 +75,24 @@ export default async function Home() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoYHV0nJrmcuPyM1BG4njqke6IkpU44LHeDAzNfkNSVqpBsTgeMsd1QICQQ6RyOTX9MZn1wDssL0nevMPoEG5gm1ajGjlqWBbk7YQj_WFReRsVp4GHjWcI40I9kLZZH10o6s-jgh94u2Q7xphXpTgng705W2P9ceHMh3psc7jVsJAXAD5LuGewjI-0PSKmzhAzB647zxmA60AZ64Vp3qi5OCiScRIY1htyFUiUVg7_cFhVV6Li0EmbcuppnR_PdwRy7tbeiBep4k7m"
                 />
               </div>
-              <div>
-                <h3 className="font-headline font-black text-2xl mb-2 uppercase">Banking App Revamp</h3>
-                <p className="font-body text-on-surface-variant max-w-md">
+              <div className="flex flex-col gap-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-headline font-black text-2xl uppercase">Banking App Revamp</h3>
+                    <p className="font-body text-sm font-medium uppercase text-gray-500">Middle Android Engineer</p>
+                  </div>
+                  <span className="font-headline text-xs font-bold uppercase tracking-widest bg-black text-white px-2 py-1">2024 — 2025 | BANKING</span>
+                </div>
+                <p className="font-body text-on-surface-variant text-sm">
                   Advanced banking interface featuring credit card modules, Server-driven UI, and Glassmorphism architecture.
                 </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {["JETPACK COMPOSE", "RETROFIT", "ROOM", "DATASTORE", "CLEAN ARCHITECTURE", "FLOW", "COROUTINES"].map((tech) => (
+                    <span key={tech} className="font-headline text-[10px] font-bold border border-black px-2 py-1 bg-surface-container-low uppercase">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
             {/* Project 2 */}
@@ -91,11 +104,24 @@ export default async function Home() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVaQq__o2nnjSQed-PLyENerknNKnmOpFP5VKKk4s_9l81GyejeT3-T-dAWKXY3w2uHiS9llZmpCXk0uMy_074W9a8Kox3WkQWiXCl8QgRG3mcSq4L_AcHubBKhzv_n7nQ8XUhQRFa6POTXFKc_RWcTgWjl3tBQvnIEPTtDJodPAaGt2tJshdZn2frwjZtLli6eTmzdrSYdkRPkmx8OvV4a91G0-L5bc8dcaewoxsmeCBzKoQhq_B9qqmcBWVuNpqTuobxeUavmK_c"
                 />
               </div>
-              <div>
-                <h3 className="font-headline font-black text-2xl mb-2 uppercase">Financial Technology</h3>
-                <p className="font-body text-on-surface-variant max-w-md">
+              <div className="flex flex-col gap-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-headline font-black text-2xl uppercase">Financial Technology</h3>
+                    <p className="font-body text-sm font-medium uppercase text-gray-500">Lead Flutter Engineer</p>
+                  </div>
+                  <span className="font-headline text-xs font-bold uppercase tracking-widest bg-black text-white px-2 py-1">2025 — 2026 | FINTECH</span>
+                </div>
+                <p className="font-body text-on-surface-variant text-sm">
                   Comprehensive fintech platform development including EKYC, Gold, and Payment modules with advanced iOS configurations.
                 </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {["FLUTTER", "BLOC", "ADVANCED DART", "CLEAN ARCHITECTURE", "DEPENDENCY INJECTION", "RETROFIT", "SHARED PREFERENCES"].map((tech) => (
+                    <span key={tech} className="font-headline text-[10px] font-bold border border-black px-2 py-1 bg-surface-container-low uppercase">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
