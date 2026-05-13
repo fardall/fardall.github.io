@@ -71,14 +71,14 @@ export default async function Home() {
               <div className="aspect-video bg-surface-container-high overflow-hidden relative">
                 <img
                   className="w-full h-full object-cover grayscale brightness-90"
-                  alt="minimalist dark mode mobile app interface"
+                  alt="banking app interface revamp"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoYHV0nJrmcuPyM1BG4njqke6IkpU44LHeDAzNfkNSVqpBsTgeMsd1QICQQ6RyOTX9MZn1wDssL0nevMPoEG5gm1ajGjlqWBbk7YQj_WFReRsVp4GHjWcI40I9kLZZH10o6s-jgh94u2Q7xphXpTgng705W2P9ceHMh3psc7jVsJAXAD5LuGewjI-0PSKmzhAzB647zxmA60AZ64Vp3qi5OCiScRIY1htyFUiUVg7_cFhVV6Li0EmbcuppnR_PdwRy7tbeiBep4k7m"
                 />
               </div>
               <div>
-                <h3 className="font-headline font-black text-2xl mb-2 uppercase">LUMEN_FINANCE</h3>
+                <h3 className="font-headline font-black text-2xl mb-2 uppercase">Banking App Revamp</h3>
                 <p className="font-body text-on-surface-variant max-w-md">
-                  High-performance fiscal tracking engine built with Jetpack Compose and clean architecture principles.
+                  Advanced banking interface featuring credit card modules, Server-driven UI, and Glassmorphism architecture.
                 </p>
               </div>
             </div>
@@ -87,46 +87,14 @@ export default async function Home() {
               <div className="aspect-video bg-surface-container-high overflow-hidden relative">
                 <img
                   className="w-full h-full object-cover grayscale brightness-90"
-                  alt="crisp mobile ui design for a meditation app"
+                  alt="fintech platform lead development"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVaQq__o2nnjSQed-PLyENerknNKnmOpFP5VKKk4s_9l81GyejeT3-T-dAWKXY3w2uHiS9llZmpCXk0uMy_074W9a8Kox3WkQWiXCl8QgRG3mcSq4L_AcHubBKhzv_n7nQ8XUhQRFa6POTXFKc_RWcTgWjl3tBQvnIEPTtDJodPAaGt2tJshdZn2frwjZtLli6eTmzdrSYdkRPkmx8OvV4a91G0-L5bc8dcaewoxsmeCBzKoQhq_B9qqmcBWVuNpqTuobxeUavmK_c"
                 />
               </div>
               <div>
-                <h3 className="font-headline font-black text-2xl mb-2 uppercase">ZENITH_FLOW</h3>
+                <h3 className="font-headline font-black text-2xl mb-2 uppercase">Financial Technology</h3>
                 <p className="font-body text-on-surface-variant max-w-md">
-                  Multi-platform meditation ecosystem utilizing Flutter with specialized BLoC state management.
-                </p>
-              </div>
-            </div>
-            {/* Project 3 */}
-            <div className="border-2 border-black p-4 md:-mt-[2px] flex flex-col gap-6 group hover:bg-surface-container-highest transition-colors cursor-pointer">
-              <div className="aspect-video bg-surface-container-high overflow-hidden relative">
-                <img
-                  className="w-full h-full object-cover grayscale brightness-90"
-                  alt="ecommerce mobile application screen"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHrlnynoJ6EoUxo5fhk8geJnbe3BoMuHTFIQ4eQh1ppJJq2A_SJXmgOkvL3HcfhUmbNcoctreZtyjwGAQBVH-gl9jrRraGmoyog8IgtKfnQ11ZapnSUc5hhiTth6whYlpXB1MFMDjT-QEgG6ZCCn_3beJQCXLo5fDEuLmq6gEXg7z-hUB2jdAf_vgieJat40rptrMvqPIpS3R3AQpZioVxghOpXmgKiEOMRVmMlWeG0kF_q3-E9S1Twh_AmdN8qzCw1-V3J9tQfNZ3"
-                />
-              </div>
-              <div>
-                <h3 className="font-headline font-black text-2xl mb-2 uppercase">VAULT_COMMERCE</h3>
-                <p className="font-body text-on-surface-variant max-w-md">
-                  Retail infrastructure focusing on offline-first capabilities and lightning-fast checkout synchronization.
-                </p>
-              </div>
-            </div>
-            {/* Project 4 */}
-            <div className="border-2 border-black p-4 md:-ml-[2px] md:-mt-[2px] flex flex-col gap-6 group hover:bg-surface-container-highest transition-colors cursor-pointer">
-              <div className="aspect-video bg-surface-container-high overflow-hidden relative">
-                <img
-                  className="w-full h-full object-cover grayscale brightness-90"
-                  alt="technical fitness app dashboard"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDpV9l4t8Qu-GTQR-HjPxRp-KkCF0A6lTRb66yDf9Iu5TaoBPgZtfeeed1gR0Q2jVw-xS3xeFW8QA3q9b8DI8HNvtWwPE197Paq1wCPoX2kHZN4lILR81fMxiZgr3q0G1YZ6CjlH66DAv0u7iLARA6dzt5AG8v121AeaS8E2SMbBxOH9WxW3lO9cQ_DxWa0JZPE7AawZ7827B6VtJ9cjkAPmqEQGlIPbe88rokq5147VExZpkiP_Ap2GMYevkWpQuaQPGnAIRbi94R"
-                />
-              </div>
-              <div>
-                <h3 className="font-headline font-black text-2xl mb-2 uppercase">KINETIC_LABS</h3>
-                <p className="font-body text-on-surface-variant max-w-md">
-                  Biometric integration layer for wearable devices using low-energy Bluetooth protocols and Coroutines.
+                  Comprehensive fintech platform development including EKYC, Gold, and Payment modules with advanced iOS configurations.
                 </p>
               </div>
             </div>
