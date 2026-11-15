@@ -28,10 +28,9 @@ describe("ButtonLink", () => {
 });
 
 describe("SectionHead", () => {
-  it("renders the title as a level-2 heading with its index", () => {
-    render(<SectionHead index="01 / work" title="Products I helped ship" />);
+  it("renders the title as a level-2 heading", () => {
+    render(<SectionHead title="Products I helped ship" />);
     expect(screen.getByRole("heading", { level: 2, name: "Products I helped ship" })).toBeInTheDocument();
-    expect(screen.getByText("01 / work")).toBeInTheDocument();
   });
 });
 

@@ -9,7 +9,6 @@ export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-title" className="bg-accent text-bg">
       <Container className="flex flex-col gap-7 pt-16 lg:gap-10 lg:pt-[120px]">
-        <p className="font-mono text-sm">{contactSection.index}</p>
         <h2
           id="contact-title"
           className="max-w-[1000px] text-[40px] leading-[1.05] font-semibold tracking-[-2.5px] md:text-[56px] lg:text-[72px]"

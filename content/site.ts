@@ -22,9 +22,9 @@ export const hero = {
 };
 
 export const sections = {
-  projects: { index: "01 / work", title: "Products I helped ship" },
-  skills: { index: "02 / toolkit", title: "What I work with" },
-  experience: { index: "03 / experience", title: "Teams I've built with" },
+  projects: { title: "Products I helped ship" },
+  skills: { title: "What I work with" },
+  experience: { title: "Teams I've built with" },
 };
 
 export const skillGroups: { group: string; items: string[] }[] = [
@@ -42,7 +42,6 @@ export const jobs: { company: string; role: string; period?: string }[] = [
 ];
 
 export const contactSection = {
-  index: "04 / contact",
   headline: "Have a mobile product to build? Let's talk.",
 };
 
